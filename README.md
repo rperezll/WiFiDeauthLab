@@ -118,7 +118,6 @@ Dentro de la aplicación **[ESP32] WiFi Marauder**:
 Este laboratorio ha sido creado y probado con las siguientes versiones de hardware y firmware. Es posible que futuras actualizaciones cambien las opciones de menú o la funcionalidad, por lo que te recomendamos verificar que estás utilizando versiones compatibles.
 
 ### Flipper Zero
-- **Modelo:** Flipper Zero
 - **Firmware:** Momentum MNTM-008 (última versión disponible al momento de la prueba)
 - **Aplicación:** [WiFi Marauder](https://github.com/0xchocolate/flipperzero-wifi-marauder) (Momentum viene precompilado con ella 😉)
 
