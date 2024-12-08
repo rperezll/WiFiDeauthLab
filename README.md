@@ -16,7 +16,7 @@ Laboratorio experimental diseñado para explorar y documentar **ataques de desau
 ## Configuración inicial
 
 ### Preparación del Flipper Zero
-Para comenzar, debemos instalar en nuestro Flipper Zero la aplicación **[ESP32] WiFi Marauder**. Si bien este método es funcional, la documentación oficial de ESP32 Marauder recomienda instalar un firmware personalizado para aprovechar al máximo esta herramienta en el Flipper Zero.
+Para comenzar, debemos instalar en nuestro Flipper Zero la aplicación [**[ESP32] WiFi Marauder**](https://github.com/0xchocolate/flipperzero-wifi-marauder). Si bien este método es funcional, la documentación oficial de ESP32 Marauder recomienda instalar un custom firmware para aprovechar al máximo esta herramienta en el Flipper Zero.
 
 En este laboratorio utilizaremos el firmware personalizado [**Momentum**](https://github.com/Next-Flip/Momentum-Firmware), el cual ya viene precompilado con la aplicación [WiFi Marauder para Flipper Zero](https://github.com/0xchocolate/flipperzero-wifi-marauder). Puedes instalarlo de manera sencilla usando su [instalador web](https://momentum-fw.dev/update/).
 
@@ -29,13 +29,13 @@ Según la documentación oficial de ESP32 Marauder, existen dos métodos para co
 - **Método supervisado** (Zero Config): recomendado para principiantes o quienes buscan una configuración rápida y sencilla.  
 - **Método avanzado**: diseñado para usuarios que deseen comprender el funcionamiento interno del proceso.
 
-En nuestro caso, seguiremos el método supervisado (identificado como "pastilla azul" en la documentación).
+En nuestro caso, seguiremos el método **supervisado** (identificado como "pastilla azul" 😁 en la documentación).
 
 1. **Flasheo de la placa:**  
 
    Usaremos el proyecto [FZ Marauder Flasher](https://github.com/UberGuidoZ/Flipper/tree/main/Wifi_DevBoard/FZ_Marauder_Flasher), que ofrece un enfoque simplificado para flashear la placa de desarrollo. Aunque existe un flasher online para este propósito, en mis pruebas no funcionó correctamente para modificar la placa.
 
-   Antes de conectar la placa a nuestor PC por el puerto USB Type-C, debemos mantener pulsado el botón boot. Manteniendolo pulsado es cuando lo enchufaremos al PC.
+   Antes de conectar la placa a nuestro PC por el puerto USB Type-C, debemos **mantener pulsado el botón boot** de la misma. Manteniendolo pulsado es cuando lo enchufaremos al PC.
 
 2. **Ejecutar el script Flash-v2.8.bat:**  
 
@@ -45,7 +45,7 @@ Si todo se realizó correctamente, tu placa de desarrollo estará configurada y 
 
 ### Escaneo de Puntos de acceso
 
-Para materializar toda la configuración de las utilidades descritas anteriormente, realizaremos un escaneo de puntos de acceso disponibles. Para ello, navegaremos por las opciones de menú del Flipper Zero, con la dev board conectada: `Apps > GPIO > ESP > [ESP32] WiFi Marauder`. 
+Para materializar toda la configuración anterior, realizaremos un escaneo de puntos de acceso WiFi disponibles. Para ello, navegaremos por las opciones de menú del Flipper Zero, con la dev board conectada: `Apps > GPIO > ESP > [ESP32] WiFi Marauder`. 
 
 Simplemente seleccionaremos la opción **Scan** con el parámetro `ap`. A continuación, se imprimirá en pantalla una lista de todos los puntos de acceso en nuestro entorno. 
 
