@@ -51,11 +51,13 @@ Simplemente seleccionaremos la opción **Scan** con el parámetro `ap`. A contin
 
 Si todo ha ido bien, ya tendremos nuestro instrumental listo para continuar con el laboratorio.
 
-## Explotación: Deauth
+## Deauth WiFi
 
-Existen 3 modalidades: **Flood**, **Targeted** y **Manual**.
+Existen 3 modalidades: **Targeted**, **Flood** y **Manual**. La modalidad Targeted se centra en desconectar dispositivos específicos, Flood afecta a todos los dispositivos de una red, y Manual permite configuraciones personalizadas para mayor control.
 
-En este laboratorio nos centraremos en la modalidad **Targeted**, ya que es un método que envía paquetes de desautenticación dirigidos únicamente a dispositivos específicos conectados a un punto de acceso. Esto permite desconectar un cliente específico en lugar de afectar a todos los usuarios de la red. A continuación, detallamos las etapas de esta modalidad de ataque.
+### Targeted mode
+
+La modalidad **Targeted** consiste en enviar paquetes de desautenticación dirigidos únicamente a dispositivos específicos conectados a un punto de acceso. Esto permite desconectar un cliente específico en lugar de afectar a todos los usuarios de la red. A continuación, detallamos las etapas de esta modalidad de ataque.
 
 > Marauder modificará los 🚨LEDs de la dev board según la acción que se está ejecutando. El LED 🔵 azul indica que está escaneando y el 🔴 rojo que está atacando.
 
@@ -107,11 +109,24 @@ Dentro de la aplicación **[ESP32] WiFi Marauder**:
     - Opción de menú: `List ap`.
     - Comprobamos que nuestro AP tiene la etiqueta `(selected)`.
     - Opción de menú: `List station`.
-    - 🤔 En mi caso, no aparece como `(selected)`.
+    - Comprobamos que nuestra Station tiene la etiqueta `(selected)`.
 
 9. Si todo ha ido bien, podemos proceder a la ejecución del ataque.
-    - Opción de menú: `Attack deauth`.
+    - Opción de menú: `Targeted deauth station`.
     - El LED 🚨 de nuestra dev board cambiará a rojo, indicando que el ataque está en curso. En este momento, **el dispositivo objetivo perderá la conexión** con la red WiFi proporcionada por el AP objetivo. Si intentamos reconectar el dispositivo a la red WiFi, veremos que **no es posible hasta que detengamos el ataque** desde nuestro Flipper.
+
+### Flood mode
+
+El modo **Flood** (desautenticación masiva) envía una gran cantidad de paquetes de desautenticación dirigidos a todos los dispositivos conectados a un punto de acceso WiFi (AP). A diferencia del **Targeted**, este método es mucho más agresivo, ya que **interrumpe simultáneamente la conexión de todos los dispositivos** en la red, causando una desconexión generalizada.
+
+El procedimiento es bastante similar al modo **Targeted**, tanto que hasta el punto 4 son identicos.
+
+1. Seleccionamos el AP objetivo.
+    - Realizar los pasos del `1` al `4` del modo **Targeted**
+
+2. Si todo ha ido bien, podemos proceder a la ejecución del ataque.
+    - Opción de menú: `Attack deauth`.
+    - El LED 🚨 de nuestra dev board cambiará a rojo, indicando que el ataque está en curso. En este momento, **todos los dispositivos perderán la conexión** con la red WiFi proporcionada por el AP objetivo. Si intentamos reconectar alguno de los dispositivos a la red, veremos que **no es posible hasta que detengamos el ataque** desde nuestro Flipper.
 
 ## Versiones de Hardware y Firmware
 
