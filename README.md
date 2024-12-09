@@ -128,6 +128,19 @@ El procedimiento es bastante similar al modo **Targeted**, tanto que hasta el pu
     - Opción de menú: `Attack deauth`.
     - El LED 🚨 de nuestra dev board cambiará a rojo, indicando que el ataque está en curso. En este momento, **todos los dispositivos perderán la conexión** con la red WiFi proporcionada por el AP objetivo. Si intentamos reconectar alguno de los dispositivos a la red, veremos que **no es posible hasta que detengamos el ataque** desde nuestro Flipper.
 
+### Manual mode
+
+Es el método ideal para pruebas en escenarios específicos o para objetivos fuera del alcance del escáner de redes. No requiere realizar un escaneo previo de puntos de acceso (AP) o dispositivos (Stations), pero como contrapartida, es necesario conocer de antemano la dirección MAC del origen (AP) y la del destino (Station).
+
+El procedimiento desde nuestro Flipper Zero para perpetrar el ataque es quizas el más sencillo de los tres:
+
+1. Ejecutar el ataque manual proporcionando la direción MAC de origen y destino.
+
+    - Opción de menú: `Targeted deauth manual`.
+    - Insertamos la dirección MAC de origen (AP)
+    - Insertamos la dirección MAC de destino (Station)
+    - El LED 🚨 de nuestra dev board cambiará a rojo, indicando que el ataque está en curso. En este momento, **el dispositivo especificado perderá la conexión** con la red WiFi proporcionada por el AP objetivo. Si intentamos reconectar de nuevo el dispositivo a la red, veremos que **no es posible hasta que detengamos el ataque** desde nuestro Flipper.
+
 ## Versiones de Hardware y Firmware
 
 Este laboratorio ha sido creado y probado con las siguientes versiones de hardware y firmware. Es posible que futuras actualizaciones cambien las opciones de menú o la funcionalidad, por lo que te recomendamos verificar que estás utilizando versiones compatibles.
