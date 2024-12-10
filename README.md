@@ -55,6 +55,8 @@ Si todo ha ido bien, ya tendremos nuestro instrumental listo para continuar con 
 
 Existen 3 modalidades: **Targeted**, **Flood** y **Manual**. La modalidad Targeted se centra en desconectar dispositivos específicos, Flood afecta a todos los dispositivos de una red, y Manual permite configuraciones personalizadas para mayor control.
 
+Para comprender cómo es posible llevar a cabo este ataque, te recomiendo leer mis notas [Entendiendo los Ataques de Desautenticación WiFi](/wifi_deauth_lore.md).
+
 ### Targeted mode
 
 La modalidad **Targeted** consiste en enviar paquetes de desautenticación dirigidos únicamente a dispositivos específicos conectados a un punto de acceso. Esto permite desconectar un cliente específico en lugar de afectar a todos los usuarios de la red. A continuación, detallamos las etapas de esta modalidad de ataque.
