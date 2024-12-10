@@ -11,6 +11,10 @@ Laboratorio experimental diseñado para explorar y documentar **ataques de desau
 
 - **ESP32-S2**: WiFi Devboard for Flipper Zero (basada en ESP32-S2) utilizada para ejecutar y analizar ataques de deauth.
 
+<div style="text-align: center; margin-top: 20px; margin-bottom: 20px;">
+    <img src="resources/flipper-board.png" alt="Texto alternativo" width="200">
+</div>
+
 > Tienes más información sobre estos dispositivos al final de esta documentación.
 
 ## Configuración inicial
@@ -19,6 +23,10 @@ Laboratorio experimental diseñado para explorar y documentar **ataques de desau
 Para comenzar, debemos instalar en nuestro Flipper Zero la aplicación [**[ESP32] WiFi Marauder**](https://github.com/0xchocolate/flipperzero-wifi-marauder). Si bien este método es funcional, la documentación oficial de ESP32 Marauder recomienda instalar un custom firmware para aprovechar al máximo esta herramienta en el Flipper Zero.
 
 En este laboratorio utilizaremos el firmware personalizado [**Momentum**](https://github.com/Next-Flip/Momentum-Firmware), el cual ya viene precompilado con la aplicación [WiFi Marauder para Flipper Zero](https://github.com/0xchocolate/flipperzero-wifi-marauder). Puedes instalarlo de manera sencilla usando su [instalador web](https://momentum-fw.dev/update/).
+
+<div style="text-align: center; margin-top: 20px; margin-bottom: 20px;">
+    <img src="resources/momentum-firmware.png" alt="Texto alternativo" width="300">
+</div>
 
 Con esto finalizamos la configuración del Flipper Zero y pasamos a preparar la placa de desarrollo.
 
@@ -37,7 +45,7 @@ En nuestro caso, seguiremos el método **supervisado** (identificado como "pasti
 
    Antes de conectar la placa a nuestro PC por el puerto USB Type-C, debemos **mantener pulsado el botón boot** de la misma. Manteniendolo pulsado es cuando lo enchufaremos al PC.
 
-2. **Ejecutar el script Flash-v2.8.bat:**  
+2. **Ejecutar el script Flash-v2.8.bat:**
 
     Al ejecutar el script, seleccionamos la `opción 1`. Esta opción flashea automáticamente la placa sin necesidad de configuraciones adicionales.
 
@@ -50,6 +58,10 @@ Para materializar toda la configuración anterior, realizaremos un escaneo de pu
 Simplemente seleccionaremos la opción **Scan** con el parámetro `ap`. A continuación, se imprimirá en pantalla una lista de todos los puntos de acceso en nuestro entorno. 
 
 Si todo ha ido bien, ya tendremos nuestro instrumental listo para continuar con el laboratorio.
+
+<div style="text-align: center; margin-top: 20px; margin-bottom: 20px;">
+    <img src="resources/scan-ap-flipper.png" alt="Texto alternativo" width="300">
+</div>
 
 ## Deauth WiFi
 
@@ -117,6 +129,10 @@ Dentro de la aplicación **[ESP32] WiFi Marauder**:
     - Opción de menú: `Targeted deauth station`.
     - El LED 🚨 de nuestra dev board cambiará a rojo, indicando que el ataque está en curso. En este momento, **el dispositivo objetivo perderá la conexión** con la red WiFi proporcionada por el AP objetivo. Si intentamos reconectar el dispositivo a la red WiFi, veremos que **no es posible hasta que detengamos el ataque** desde nuestro Flipper.
 
+<div style="text-align: center; margin-top: 20px; margin-bottom: 20px;">
+    <img src="resources/targeted-deauth-station-flipper.png" alt="Texto alternativo" width="300">
+</div>
+
 ### Flood mode
 
 El modo **Flood** (desautenticación masiva) envía una gran cantidad de paquetes de desautenticación dirigidos a todos los dispositivos conectados a un punto de acceso WiFi (AP). A diferencia del **Targeted**, este método es mucho más agresivo, ya que **interrumpe simultáneamente la conexión de todos los dispositivos** en la red, causando una desconexión generalizada.
@@ -130,6 +146,10 @@ El procedimiento es bastante similar al modo **Targeted**, tanto que hasta el pu
     - Opción de menú: `Attack deauth`.
     - El LED 🚨 de nuestra dev board cambiará a rojo, indicando que el ataque está en curso. En este momento, **todos los dispositivos perderán la conexión** con la red WiFi proporcionada por el AP objetivo. Si intentamos reconectar alguno de los dispositivos a la red, veremos que **no es posible hasta que detengamos el ataque** desde nuestro Flipper.
 
+<div style="text-align: center; margin-top: 20px; margin-bottom: 20px;">
+    <img src="resources/flood-attack-flipper.png" alt="Texto alternativo" width="300">
+</div>
+
 ### Manual mode
 
 Es el método ideal para pruebas en escenarios específicos o para objetivos fuera del alcance del escáner de redes. No requiere realizar un escaneo previo de puntos de acceso (AP) o dispositivos (Stations), pero como contrapartida, es necesario conocer de antemano la dirección MAC del origen (AP) y la del destino (Station).
@@ -142,6 +162,10 @@ El procedimiento desde nuestro Flipper Zero para perpetrar el ataque es quizas e
     - Insertamos la dirección MAC de origen (AP)
     - Insertamos la dirección MAC de destino (Station)
     - El LED 🚨 de nuestra dev board cambiará a rojo, indicando que el ataque está en curso. En este momento, **el dispositivo especificado perderá la conexión** con la red WiFi proporcionada por el AP objetivo. Si intentamos reconectar de nuevo el dispositivo a la red, veremos que **no es posible hasta que detengamos el ataque** desde nuestro Flipper.
+
+<div style="text-align: center; margin-top: 20px; margin-bottom: 20px;">
+    <img src="resources/targeted-deauth-manual-flipper.png" alt="Texto alternativo" width="300">
+</div>
 
 ## Versiones de Hardware y Firmware
 
