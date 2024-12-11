@@ -11,7 +11,7 @@ Laboratorio experimental diseñado para explorar y documentar ataques de **desau
 
 - **ESP32-S2**: WiFi Devboard for Flipper Zero (basada en ESP32-S2) utilizada para ejecutar y analizar ataques de deauth.
 
-<div style="text-align: center; margin-top: 20px; margin-bottom: 20px;">
+<div style="margin-top: 20px; margin-bottom: 20px;" align="center">
     <img src="resources/flipper-board.png" alt="Texto alternativo" width="200">
 </div>
 
@@ -24,7 +24,7 @@ Para comenzar, debemos instalar en nuestro Flipper Zero la aplicación [**[ESP32
 
 En este laboratorio utilizaremos el firmware personalizado [**Momentum**](https://github.com/Next-Flip/Momentum-Firmware), el cual ya viene precompilado con la aplicación [WiFi Marauder para Flipper Zero](https://github.com/0xchocolate/flipperzero-wifi-marauder). Puedes instalarlo de manera sencilla usando su [instalador web](https://momentum-fw.dev/update/).
 
-<div style="text-align: center; margin-top: 20px; margin-bottom: 20px;">
+<div style="margin-top: 20px; margin-bottom: 20px;" align="center">
     <img src="resources/momentum-firmware.png" alt="Texto alternativo" width="300">
 </div>
 
@@ -59,7 +59,7 @@ Simplemente seleccionaremos la opción **Scan** con el parámetro `ap`. A contin
 
 Si todo ha ido bien, ya tendremos nuestro instrumental listo para continuar con el laboratorio.
 
-<div style="text-align: center; margin-top: 20px; margin-bottom: 20px;">
+<div style="margin-top: 20px; margin-bottom: 20px;" align="center">
     <img src="resources/scan-ap-flipper.png" alt="Texto alternativo" width="300">
 </div>
 
@@ -129,7 +129,7 @@ Dentro de la aplicación **[ESP32] WiFi Marauder**:
     - Opción de menú: `Targeted deauth station`.
     - El LED 🚨 de nuestra dev board cambiará a rojo, indicando que el ataque está en curso. En este momento, **el dispositivo objetivo perderá la conexión** con la red WiFi proporcionada por el AP objetivo. Si intentamos reconectar el dispositivo a la red WiFi, veremos que **no es posible hasta que detengamos el ataque** desde nuestro Flipper.
 
-<div style="text-align: center; margin-top: 20px; margin-bottom: 20px;">
+<div style="margin-top: 20px; margin-bottom: 20px;" align="center">
     <img src="resources/targeted-deauth-station-flipper.png" alt="Texto alternativo" width="300">
 </div>
 
@@ -146,7 +146,7 @@ El procedimiento es bastante similar al modo **Targeted**, tanto que hasta el pu
     - Opción de menú: `Attack deauth`.
     - El LED 🚨 de nuestra dev board cambiará a rojo, indicando que el ataque está en curso. En este momento, **todos los dispositivos perderán la conexión** con la red WiFi proporcionada por el AP objetivo. Si intentamos reconectar alguno de los dispositivos a la red, veremos que **no es posible hasta que detengamos el ataque** desde nuestro Flipper.
 
-<div style="text-align: center; margin-top: 20px; margin-bottom: 20px;">
+<div style="margin-top: 20px; margin-bottom: 20px;" align="center">
     <img src="resources/flood-attack-flipper.png" alt="Texto alternativo" width="300">
 </div>
 
@@ -163,7 +163,7 @@ El procedimiento desde nuestro Flipper Zero para perpetrar el ataque es quizas e
     - Insertamos la dirección MAC de destino (Station)
     - El LED 🚨 de nuestra dev board cambiará a rojo, indicando que el ataque está en curso. En este momento, **el dispositivo especificado perderá la conexión** con la red WiFi proporcionada por el AP objetivo. Si intentamos reconectar de nuevo el dispositivo a la red, veremos que **no es posible hasta que detengamos el ataque** desde nuestro Flipper.
 
-<div style="text-align: center; margin-top: 20px; margin-bottom: 20px;">
+<div style="margin-top: 20px; margin-bottom: 20px;" align="center">
     <img src="resources/targeted-deauth-manual-flipper.png" alt="Texto alternativo" width="300">
 </div>
 
