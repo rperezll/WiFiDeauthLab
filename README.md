@@ -169,7 +169,7 @@ El procedimiento desde nuestro Flipper Zero para perpetrar el ataque es quizas e
 
 ## Detectar Deauth
 
-> [!INFO]
+> [!WARNING]
 > In progress... ¿Cómo podemos detectar que estamos siendo atacados por un Deauth?
 
 ## Versiones de Hardware y Firmware
