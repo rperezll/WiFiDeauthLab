@@ -1,6 +1,6 @@
 # 🧪 WiFiDeauthLab
 
-Laboratorio experimental diseñado para explorar y documentar ataques de **desautenticación (deauth)** en redes WiFi dentro de un entorno controlado y seguro. Este proyecto tiene como objetivo proporcionar recursos **educativos** para entender cómo funcionan estos ataques, cómo configurarlos en un entorno seguro, y cómo mitigar sus efectos en redes reales, utilizando la herramienta [**ESP32Marauder**](https://github.com/justcallmekoko/ESP32Marauder) y **Flipper Zero**.
+Laboratorio experimental diseñado para explorar y documentar ataques de **desautenticación (deauth)** en redes WiFi dentro de un entorno controlado y seguro. Este proyecto tiene como objetivo proporcionar recursos **educativos** para entender cómo funcionan estos ataques, cómo configurarlos en un entorno seguro y cómo mitigar sus efectos en redes reales, utilizando el proyecto [**ESP32Marauder**](https://github.com/justcallmekoko/ESP32Marauder) mediante **Flipper Zero**.
 
 > [!WARNING]
 > Este repositorio está destinado exclusivamente a **fines educativos y de investigación** en ciberseguridad. El uso indebido de esta información en redes no autorizadas ***es ilegal y está estrictamente prohibido en multitud de paises***.
@@ -166,6 +166,11 @@ El procedimiento desde nuestro Flipper Zero para perpetrar el ataque es quizas e
 <div style="margin-top: 20px; margin-bottom: 20px;" align="center">
     <img src="resources/targeted-deauth-manual-flipper.png" alt="Texto alternativo" width="300">
 </div>
+
+## Detectar Deauth
+
+> [!INFO]
+> In progress... ¿Cómo podemos detectar que estamos siendo atacados por un Deauth?
 
 ## Versiones de Hardware y Firmware
 

@@ -1,8 +1,8 @@
-# 🤔 Entendiendo los Ataques de Desautenticación WiFi
+# 🛜 Entendiendo los Ataques de Desautenticación WiFi
 
 Un ataque de desautenticación WiFi es una técnica utilizada para interrumpir la conexión entre un dispositivo y una red WiFi. Este tipo de ataque pertenece al grupo denominado *denial-of-service attack* o ataques de denegación de servicio (DoS).
 
-## Una red WiFi *for Dummies*
+## 🤔 Una red WiFi *for Dummies*
 
 Una red WiFi permite que dispositivos de diversa índole se conecten a una misma red, habilitando el acceso a Internet. Para que esto ocurra, deben considerarse algunos elementos y principios clave:
 
