@@ -1,6 +1,6 @@
 # 🧪 WiFiDeauthLab
 
-Laboratorio experimental diseñado para explorar y documentar **ataques de desautenticación** (deauth) en redes Wi-Fi dentro de un entorno controlado y seguro. Este proyecto tiene como objetivo proporcionar **recursos educativos** para entender cómo funcionan estos ataques, cómo configurarlos en un laboratorio, y cómo mitigar sus efectos en redes reales.
+Laboratorio experimental diseñado para explorar y documentar ataques de **desautenticación (deauth)** en redes WiFi dentro de un entorno controlado y seguro. Este proyecto tiene como objetivo proporcionar recursos **educativos** para entender cómo funcionan estos ataques, cómo configurarlos en un entorno seguro, y cómo mitigar sus efectos en redes reales, utilizando la herramienta [**ESP32Marauder**](https://github.com/justcallmekoko/ESP32Marauder) y **Flipper Zero**.
 
 > [!WARNING]
 > Este repositorio está destinado exclusivamente a **fines educativos y de investigación** en ciberseguridad. El uso indebido de esta información en redes no autorizadas ***es ilegal y está estrictamente prohibido en multitud de paises***.
@@ -137,7 +137,7 @@ Dentro de la aplicación **[ESP32] WiFi Marauder**:
 
 El modo **Flood** (desautenticación masiva) envía una gran cantidad de paquetes de desautenticación dirigidos a todos los dispositivos conectados a un punto de acceso WiFi (AP). A diferencia del **Targeted**, este método es mucho más agresivo, ya que **interrumpe simultáneamente la conexión de todos los dispositivos** en la red, causando una desconexión generalizada.
 
-El procedimiento es bastante similar al modo **Targeted**, tanto que hasta el punto 4 son identicos.
+El procedimiento es bastante similar al modo **Targeted**, tanto que hasta el punto 4 son idénticos.
 
 1. Seleccionamos el AP objetivo.
     - Realizar los pasos del `1` al `4` del modo **Targeted**
